@@ -1,9 +1,14 @@
 <script setup lang="ts">
-import type { Schedule } from '@/stores/data-model';
+import type { ScheduleId } from '@/stores/data-model';
+import { useScheduleStore } from '@/stores/schedules';
+import { computed } from 'vue';
 
 const props = defineProps<{
-    schedule: Schedule
+    scheduleId: ScheduleId
 }>()
+
+const scheudleStore = useScheduleStore()
+const schedule = computed(() => scheudleStore.schedules[props.scheduleId])
 
 </script>
 
