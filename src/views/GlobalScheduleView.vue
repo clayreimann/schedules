@@ -42,5 +42,6 @@ const activeWeek = ref(0)
   display: flex;
   place-items: flex-start;
   flex-wrap: wrap;
+  flex-direction: column;
 }
 </style>

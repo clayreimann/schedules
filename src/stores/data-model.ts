@@ -6,6 +6,8 @@ export type PersonId = string
 
 export type ScheduleId = string
 
+export type Weekday = 'monday' | 'tuesday' | 'wednesday' | 'thursday' | 'friday' | 'saturday' | 'sunday';
+
 export interface Location {
     id: LocationId
     name: string
@@ -180,7 +182,7 @@ export const tmplSchedules: Record<ScheduleId, Schedule> = {
     'berkner-laura': {
         id: 'berkner-laura', personId: 'berkner-laura',
         weeks: [
-            { sunday: [], monday: [], tuesday: [], wednesday: [], thursday: [], friday: [], saturday: [] },
+            { sunday: [], monday: ['wt-mon-am'], tuesday: [], wednesday: [], thursday: [], friday: [], saturday: [] },
             { sunday: [], monday: [], tuesday: [], wednesday: [], thursday: [], friday: [], saturday: [] },
             { sunday: [], monday: [], tuesday: [], wednesday: [], thursday: [], friday: [], saturday: [] },
             { sunday: [], monday: [], tuesday: [], wednesday: [], thursday: [], friday: [], saturday: [] },
@@ -189,7 +191,7 @@ export const tmplSchedules: Record<ScheduleId, Schedule> = {
     'christensen-kayla': {
         id: 'christensen-kayla', personId: 'christensen-kayla',
         weeks: [
-            { sunday: [], monday: [], tuesday: [], wednesday: [], thursday: [], friday: [], saturday: [] },
+            { sunday: [], monday: ['wt-mon-am'], tuesday: [], wednesday: [], thursday: [], friday: [], saturday: [] },
             { sunday: [], monday: [], tuesday: [], wednesday: [], thursday: [], friday: [], saturday: [] },
             { sunday: [], monday: [], tuesday: [], wednesday: [], thursday: [], friday: [], saturday: [] },
             { sunday: [], monday: [], tuesday: [], wednesday: [], thursday: [], friday: [], saturday: [] },
@@ -207,7 +209,7 @@ export const tmplSchedules: Record<ScheduleId, Schedule> = {
     'erickson-avid': {
         id: 'erickson-avid', personId: 'erickson-avid',
         weeks: [
-            { sunday: [], monday: [], tuesday: [], wednesday: [], thursday: [], friday: [], saturday: [] },
+            { sunday: [], monday: ['wt-mon-am'], tuesday: [], wednesday: [], thursday: [], friday: [], saturday: [] },
             { sunday: [], monday: [], tuesday: [], wednesday: [], thursday: [], friday: [], saturday: [] },
             { sunday: [], monday: [], tuesday: [], wednesday: [], thursday: [], friday: [], saturday: [] },
             { sunday: [], monday: [], tuesday: [], wednesday: [], thursday: [], friday: [], saturday: [] },
@@ -216,7 +218,7 @@ export const tmplSchedules: Record<ScheduleId, Schedule> = {
     'hoffmann-rika': {
         id: 'hoffmann-rika', personId: 'hoffmann-rika',
         weeks: [
-            { sunday: [], monday: [], tuesday: [], wednesday: [], thursday: [], friday: [], saturday: [] },
+            { sunday: [], monday: ['wt-mon-am'], tuesday: [], wednesday: [], thursday: [], friday: [], saturday: [] },
             { sunday: [], monday: [], tuesday: [], wednesday: [], thursday: [], friday: [], saturday: [] },
             { sunday: [], monday: [], tuesday: [], wednesday: [], thursday: [], friday: [], saturday: [] },
             { sunday: [], monday: [], tuesday: [], wednesday: [], thursday: [], friday: [], saturday: [] },
@@ -225,7 +227,7 @@ export const tmplSchedules: Record<ScheduleId, Schedule> = {
     'goebel-cassie': {
         id: 'goebel-cassie', personId: 'goebel-cassie',
         weeks: [
-            { sunday: [], monday: [], tuesday: [], wednesday: [], thursday: [], friday: [], saturday: [] },
+            { sunday: [], monday: ['wt-mon-am'], tuesday: [], wednesday: [], thursday: [], friday: [], saturday: [] },
             { sunday: [], monday: [], tuesday: [], wednesday: [], thursday: [], friday: [], saturday: [] },
             { sunday: [], monday: [], tuesday: [], wednesday: [], thursday: [], friday: [], saturday: [] },
             { sunday: [], monday: [], tuesday: [], wednesday: [], thursday: [], friday: [], saturday: [] },
@@ -234,7 +236,7 @@ export const tmplSchedules: Record<ScheduleId, Schedule> = {
     'gorbach-roxanne': {
         id: 'gorbach-roxanne', personId: 'gorbach-roxanne',
         weeks: [
-            { sunday: [], monday: [], tuesday: [], wednesday: [], thursday: [], friday: [], saturday: [] },
+            { sunday: [], monday: ['wt-mon-am'], tuesday: [], wednesday: [], thursday: [], friday: [], saturday: [] },
             { sunday: [], monday: [], tuesday: [], wednesday: [], thursday: [], friday: [], saturday: [] },
             { sunday: [], monday: [], tuesday: [], wednesday: [], thursday: [], friday: [], saturday: [] },
             { sunday: [], monday: [], tuesday: [], wednesday: [], thursday: [], friday: [], saturday: [] },

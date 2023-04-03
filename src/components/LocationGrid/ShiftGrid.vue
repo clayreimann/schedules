@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import type { ShiftSpecId } from '@/stores/data-model';
+import type { PersonId, ShiftSpecId } from '@/stores/data-model';
 import { usePeopleStore } from '@/stores/people';
 import { useScheduleStore } from '@/stores/schedules';
 import { useShiftStore } from '@/stores/shifts';
-import { computed, defineProps } from 'vue';
+import { computed } from 'vue';
 
 const props = defineProps<{
     shiftId: ShiftSpecId
@@ -16,6 +16,7 @@ const scheduleStore = useScheduleStore()
 
 const shift = computed(() => shiftStore.shifts[props.shiftId])
 const slots = computed(() => scheduleStore.peopleByShiftId[props.week][props.shiftId] || [])
+const getName = (personId: PersonId) => peopleStore.people[personId].name
 
 </script>
 
@@ -24,10 +25,11 @@ const slots = computed(() => scheduleStore.peopleByShiftId[props.week][props.shi
         <b :title="shift.id">{{ shift.label }}</b>
         <div v-for="n in shift.slots" class="shift">
             <span v-if="slots[n-1]">
-                {{ peopleStore.people[slots[n - 1]].name }}
+                {{ getName(slots[n - 1]) }}
             </span>
             <span class="empty" v-else>Empty</span>
         </div>
+        <div class="shift overflow" v-if="slots.length > shift.slots" :title="slots.slice(shift.slots).map(getName).join(' / ')">+ {{ slots.length - shift.slots }} more (hover)</div>
     </div>
 </template>
 
@@ -58,6 +60,10 @@ const slots = computed(() => scheduleStore.peopleByShiftId[props.week][props.shi
 
     &:first-of-type {
         border-top: 0;
+    }
+
+    &.overflow {
+        font-style: italic;
     }
 }
 

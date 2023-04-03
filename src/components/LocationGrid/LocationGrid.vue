@@ -35,7 +35,7 @@ const days = computed(() => {
         </thead>
         <tbody>
             <td class="variable">{{ week + 1 }}</td>
-                <template v-for="day in days">
+                <template v-for="day, i in days" :key="`${week}-${i}`">
                     <td>
                         <template v-for="shiftId in day">
                             <ShiftGrid :week="week" :shiftId="shiftId" />

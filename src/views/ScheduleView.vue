@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import ScheduleGrid from '@/components/ScheduleGrid.vue';
+import ScheduleGrid from '@/components/ScheduleGrid/ScheduleGrid.vue';
 import type { PersonId } from '@/stores/data-model';
 import { usePeopleStore } from '@/stores/people';
 import { useScheduleStore } from '@/stores/schedules';
@@ -17,8 +17,14 @@ const scheduleId = computed(() => scheduleStore.scheduleByPersonId[personId.valu
 </script>
 
 <template>
-  <div>
+  <div class="schedule-view">
     {{ person.name }}
     <ScheduleGrid :schedule-id="scheduleId" />
   </div>
 </template>
+
+<style>
+.schedule-view {
+  padding-bottom: 2rem;
+}
+</style>

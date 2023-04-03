@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import type { ScheduleId } from '@/stores/data-model';
 import { useScheduleStore } from '@/stores/schedules';
+import { useShiftStore } from '@/stores/shifts';
 import { computed } from 'vue';
+import DayGrid from './DayGrid.vue';
 
 const props = defineProps<{
     scheduleId: ScheduleId
@@ -9,6 +11,9 @@ const props = defineProps<{
 
 const scheudleStore = useScheduleStore()
 const schedule = computed(() => scheudleStore.schedules[props.scheduleId])
+
+const shiftStore = useShiftStore()
+
 
 </script>
 
@@ -30,13 +35,13 @@ const schedule = computed(() => scheudleStore.schedules[props.scheduleId])
         <tbody>
             <tr v-for="(week, i) in schedule.weeks">
                 <td class="variable">{{ i + 1 }}</td>
-                <td>{{ week.sunday }}</td>
-                <td>{{ week.monday }}</td>
-                <td>{{ week.tuesday }}</td>
-                <td>{{ week.wednesday }}</td>
-                <td>{{ week.thursday }}</td>
-                <td>{{ week.friday }}</td>
-                <td>{{ week.saturday }}</td>
+                <td><DayGrid :week="i" day="sunday" :schedule-id="scheduleId" :selected-shifts="week.sunday"/></td>
+                <td><DayGrid :week="i" day="monday" :schedule-id="scheduleId" :selected-shifts="week.monday"/></td>
+                <td><DayGrid :week="i" day="tuesday" :schedule-id="scheduleId" :selected-shifts="week.tuesday"/></td>
+                <td><DayGrid :week="i" day="wednesday" :schedule-id="scheduleId" :selected-shifts="week.wednesday"/></td>
+                <td><DayGrid :week="i" day="thursday" :schedule-id="scheduleId" :selected-shifts="week.thursday"/></td>
+                <td><DayGrid :week="i" day="friday" :schedule-id="scheduleId" :selected-shifts="week.friday"/></td>
+                <td><DayGrid :week="i" day="saturday" :schedule-id="scheduleId" :selected-shifts="week.saturday"/></td>
                 <td class="variable"></td>
             </tr>
         </tbody>
