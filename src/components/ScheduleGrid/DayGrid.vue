@@ -79,16 +79,18 @@ const toggleShift = (day: Weekday, shiftId: ShiftSpecId) => {
 
 .shifts {
     display: flex;
+    flex-direction: column;
 }
 
 .btn.outline {
     border: 1px solid black;
     border-radius: 4px;
     padding: 0.2rem;
-    margin: 0 0.2rem;
+    margin: 0.2rem;
     background-color: white;
     cursor: pointer;
     color: inherit;
+    text-align: center;
 
 
     &.cambridge {
@@ -114,9 +116,12 @@ const toggleShift = (day: Weekday, shiftId: ShiftSpecId) => {
     .btn.outline {
         border: none;
         display: none;
+        padding: 0;
+        margin: 0;
 
         &.active {
             display: block;
+            white-space: nowrap;
         }
 
         &.cambridge {
@@ -138,6 +143,10 @@ const toggleShift = (day: Weekday, shiftId: ShiftSpecId) => {
         }
     }
 
+    .shift-batch {
+        padding: 0;
+    }
+    
     .shift-start {
         display: none;
     }

@@ -1,9 +1,9 @@
+import { useLocalStorage } from "@vueuse/core"
 import { defineStore } from "pinia"
-import { computed, reactive } from "vue"
-import { tmplShifts } from "./data-model"
+import type { ShiftSpec, ShiftSpecId } from "./data-model"
 
 export const useShiftStore = defineStore('shifts', () => {
-    const shifts = reactive(tmplShifts)
+    const shifts = useLocalStorage('store/shifts', {} as Record<ShiftSpecId, ShiftSpec>, { listenToStorageChanges: true })
 
     return { shifts }
 })

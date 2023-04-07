@@ -1,24 +1,24 @@
 <script setup lang="ts">
+import ShiftGrid from '@/components/LocationGrid/ShiftGrid.vue';
 import type { LocationId } from '@/stores/data-model';
 import { useLocationStore } from '@/stores/locations';
+import { useViewOptions } from '@/stores/view-options';
 import { computed } from 'vue';
-import ShiftGrid from './ShiftGrid.vue';
 
 const props = defineProps<{
-    week: number
     locationId: LocationId
 }>()
 
+const viewOptions = useViewOptions()
 const locationStore = useLocationStore()
+
 const location = computed(() => locationStore.locations[props.locationId])
-const days = computed(() => {
-    const tmplWeek = location.value.template[props.week]
-    return [tmplWeek.sunday, tmplWeek.monday, tmplWeek.tuesday, tmplWeek.wednesday, tmplWeek.thursday, tmplWeek.friday, tmplWeek.saturday]
-})
+const week = computed(() => location.value.template[viewOptions.activeWeek])
+const weekNo = computed(() => viewOptions.activeWeek)
 </script>
 
 <template>
-    <h2>{{ location.name }}</h2>
+    <h3>{{ location.name }}</h3>
     <table>
         <thead>
             <tr>
@@ -34,15 +34,31 @@ const days = computed(() => {
             </tr>
         </thead>
         <tbody>
-            <td class="variable">{{ week + 1 }}</td>
-                <template v-for="day, i in days" :key="`${week}-${i}`">
-                    <td>
-                        <template v-for="shiftId in day">
-                            <ShiftGrid :week="week" :shiftId="shiftId" />
-                        </template>
-                    </td>
-                </template>
+            <template v-if="viewOptions.showAll">
+                <tr v-for="(week, w) in location.template">
+                    <td class="variable">{{ w + 1 }}</td>
+                    <td><ShiftGrid v-for="shiftId in week.sunday" :week="w" :shiftId="shiftId" /></td>
+                    <td><ShiftGrid v-for="shiftId in week.monday" :week="w" :shiftId="shiftId" /></td>
+                    <td><ShiftGrid v-for="shiftId in week.tuesday" :week="w" :shiftId="shiftId" /></td>
+                    <td><ShiftGrid v-for="shiftId in week.wednesday" :week="w" :shiftId="shiftId" /></td>
+                    <td><ShiftGrid v-for="shiftId in week.thursday" :week="w" :shiftId="shiftId" /></td>
+                    <td><ShiftGrid v-for="shiftId in week.friday" :week="w" :shiftId="shiftId" /></td>
+                    <td><ShiftGrid v-for="shiftId in week.saturday" :week="w" :shiftId="shiftId" /></td>
+                    <td class="variable"></td>
+                </tr>
+            </template>
+            <tr v-else>
+                <td class="variable">{{ weekNo + 1 }}</td>
+                <td><ShiftGrid v-for="shiftId in week.sunday" :week="weekNo" :shiftId="shiftId" /></td>
+                <td><ShiftGrid v-for="shiftId in week.monday" :week="weekNo" :shiftId="shiftId" /></td>
+                <td><ShiftGrid v-for="shiftId in week.tuesday" :week="weekNo" :shiftId="shiftId" /></td>
+                <td><ShiftGrid v-for="shiftId in week.wednesday" :week="weekNo" :shiftId="shiftId" /></td>
+                <td><ShiftGrid v-for="shiftId in week.thursday" :week="weekNo" :shiftId="shiftId" /></td>
+                <td><ShiftGrid v-for="shiftId in week.friday" :week="weekNo" :shiftId="shiftId" /></td>
+                <td><ShiftGrid v-for="shiftId in week.saturday" :week="weekNo" :shiftId="shiftId" /></td>
                 <td class="variable"></td>
+            </tr>
+
         </tbody>
     </table>
 </template>
@@ -52,23 +68,22 @@ table {
     border-collapse: collapse;
 }
 
-th,
-td {
+:deep(th),
+:deep(td) {
     width: 160px;
 }
 
-th {
-    font-weight: bold;
-}
-
-td {
-    border: 1px solid var(--color-border);
-}
-
-th.variable,
-td.variable {
+:deep(.variable) {
     min-width: 50px;
     border: none;
     width: initial;
 }
-</style>
+
+:deep(th) {
+    font-weight: bold;
+}
+
+:deep(td) {
+    border: 1px solid var(--color-border);
+}</style>
+  

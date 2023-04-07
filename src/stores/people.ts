@@ -1,10 +1,11 @@
+import { useLocalStorage } from '@vueuse/core'
 import { defineStore } from 'pinia'
-import { computed, reactive } from 'vue'
-import { tmplPeople } from './data-model'
+import { computed } from 'vue'
+import type { Person, PersonId } from './data-model'
 
 export const usePeopleStore = defineStore('people', () => {
-    const people = reactive(tmplPeople)
-    const ids = computed(() => Object.keys(people).sort())
+    const people = useLocalStorage('store/people', {} as Record<PersonId, Person>, { listenToStorageChanges: true })
+    const ids = computed(() => Object.keys(people.value).sort())
 
     return { people, ids }
 })

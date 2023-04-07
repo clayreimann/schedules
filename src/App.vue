@@ -2,31 +2,64 @@
 import { RouterLink, RouterView } from 'vue-router'
 import GlobalScheduleView from '@/views/GlobalScheduleView.vue'
 import { usePeopleStore } from '@/stores/people'
+import { useLocationStore } from '@/stores/locations';
+import ContextSelect from '@/components/ContextSelect.vue'
 
 const peopleStore = usePeopleStore()
+const locationStore = useLocationStore()
 </script>
 
 <template>
   <div class="wrapper">
-    <GlobalScheduleView />
+    <nav>
+      <div>
+        <h5>Locations</h5>
+        <template v-for="l in locationStore.locations">
+          <RouterLink :to="`/location/${l.id}`">{{ l.name }}</RouterLink>
+        </template>
+      </div>
+
+      <div>
+        <h5>People</h5>
+        <template v-for="id in peopleStore.ids">
+          <RouterLink :to="`/schedule/${id}`">{{ peopleStore.people[id].name }}</RouterLink>
+        </template>
+      </div>
+
+      <div>
+        <h5>Other</h5>
+        <RouterLink to="/all">Everything</RouterLink>
+        <RouterLink to="/">Settings</RouterLink>
+        <ContextSelect/>
+      </div>
+
+    </nav>
+
+    <div class="portal">
+      <RouterView />
+    </div>
   </div>
-
-
-  <nav>
-    <RouterLink to="/">Settings</RouterLink>
-    <template v-for="id in peopleStore.ids">
-      <RouterLink :to="`/schedule/${id}`">{{ peopleStore.people[id].name }}</RouterLink>
-    </template>
-  </nav>
-  <RouterView />
 </template>
 
 <style scoped>
+:root {
+  --nav-height: 3rem;
+}
+
+.wrapper {
+  height: 100vh;
+}
+
+.portal {
+  height: calc(100vh - 15rem);
+  overflow: auto;
+}
+
 nav {
   width: 100%;
+  height: 15rem;
   font-size: 12px;
   text-align: center;
-  margin-top: 2rem;
 }
 
 nav a.router-link-exact-active {
@@ -40,7 +73,6 @@ nav a.router-link-exact-active:hover {
 nav a {
   display: inline-block;
   padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
 }
 
 nav a:first-of-type {
@@ -55,11 +87,22 @@ nav a:first-of-type {
 
   nav {
     text-align: left;
-    margin-left: -1rem;
     font-size: 1rem;
 
     padding: 1rem 0;
-    margin-top: 1rem;
+  }
+}
+
+@media print {
+  nav {
+    display: none;
+  }
+  .wrapper {
+    height: initial;
+  }
+  .portal {
+    height: initial;
+    overflow: initial;
   }
 }
 </style>
