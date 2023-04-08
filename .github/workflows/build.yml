@@ -24,11 +24,11 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: 'Install'
-        runs: 
+        run: 
           using: node16
           main: npm ci
       - name: 'Build'
-        runs: 
+        run: 
           using: node16
           main: npm run build
       - name: Upload artifact
