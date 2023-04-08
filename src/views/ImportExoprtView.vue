@@ -10,6 +10,10 @@ const peopleStore = usePeopleStore()
 const scheduleStore = useScheduleStore()
 const shiftStore = useShiftStore()
 
+const pad = (num: number, depth = 2) => {
+    const len = `${num}`.length
+    return '0'.repeat(depth - len) + `${num}`
+}
 const saveFile = () => {
     const text = JSON.stringify({
         locations: locationStore.locations,
@@ -18,7 +22,7 @@ const saveFile = () => {
         people: peopleStore.people,
     }, null, 2);
     const now = new Date()
-    const date = `${now.getFullYear()}-${now.getMonth()+1}-${now.getDate()}T${now.getHours()}-${now.getMinutes()}-${now.getSeconds()}`
+    const date = `${now.getFullYear()}-${pad(now.getMonth()+1)}-${pad(now.getDate())}T${pad(now.getHours())}-${pad(now.getMinutes())}-${pad(now.getSeconds())}`
 	const filename = `schedule-run-${date}.schedule`;
 	const element = document.createElement('a');
 	element.setAttribute('href', 'data:application/json;charset=utf-8,' + encodeURIComponent(text));

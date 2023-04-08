@@ -33,9 +33,12 @@ const getName = (personId: PersonId) => `${peopleStore.people[personId].lastName
     </div>
 </template>
 
-<style scoped>
+<style>
 .shift-container {
     padding: 0.3rem 0.1rem;
+    & b {
+        display: block;
+    }
 
     &.cambridge {
         /* border: 1px solid var(--theme-color-cambridge); */
@@ -53,7 +56,9 @@ const getName = (personId: PersonId) => `${peopleStore.people[personId].lastName
         }
     }
 }
+</style>
 
+<style scoped>
 .shift {
     padding: 0.1rem 0.3rem;
     border-top: 1px dotted var(--color-border);

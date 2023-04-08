@@ -64,10 +64,6 @@ const weekNo = computed(() => viewOptions.activeWeek)
 </template>
 
 <style scoped>
-table {
-    border-collapse: collapse;
-}
-
 :deep(th),
 :deep(td) {
     width: 160px;

@@ -20,9 +20,28 @@ a,
   transition: 0.4s;
 }
 
+a.btn {
+  display: inline-block;
+  padding: 0.2rem;
+  margin: 0.2rem;
+  border-radius: 0.1rem;
+}
+
+a.btn.btn-danger {
+  color: red;
+}
+
+table {
+  border-collapse: collapse;
+}
+
 @media (hover: hover) {
   a:hover {
     background-color: var(--uwcu-green-bg);
+  }
+
+  a.btn.btn-danger:hover {
+    background-color: rgba(220,20,60, 0.2);
   }
 }
 

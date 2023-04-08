@@ -3,6 +3,8 @@ import PersonEdit from '@/components/Settings/PersonEdit.vue';
 import { usePeopleStore } from '@/stores/people';
 import { ref } from 'vue';
 import { v4 as uuid } from 'uuid';
+import { useLocationStore } from '@/stores/locations';
+import LocationEdit from '@/components/Settings/LocationEdit.vue';
 
 const peopleStore = usePeopleStore()
 const selectedPerson = ref('')
@@ -11,6 +13,9 @@ const newEmployee = () => {
   peopleStore.people[newId] = { id: newId, lastName: 'Employee', firstName: 'New' }
   selectedPerson.value = newId
 }
+
+const locationStore = useLocationStore()
+const selectedLocation = ref('')
 </script>
 
 <template>
@@ -23,12 +28,22 @@ const newEmployee = () => {
     <a class="btn" @click="newEmployee">Add an employee</a>
   </div>
   <PersonEdit :person-id="selectedPerson" />
+
+  <h3>Edit Locations</h3>
+  <div class="header">
+    <select v-model="selectedLocation">
+      <option value="">Select a location</option>
+      <option v-for="location in locationStore.locations" :value="location.id">{{ location.name }}</option>
+    </select>
+  </div>
+  <LocationEdit :location-id="selectedLocation" />
 </template>
 
 <style scoped>
 .header {
   display: flex;
   flex-direction: row;
+  margin-bottom: 0.5rem;
 }
 
 a.btn {

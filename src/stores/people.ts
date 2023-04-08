@@ -8,10 +8,7 @@ export const usePeopleStore = defineStore('people', () => {
     
     const ids = computed(() => Object.keys(people.value)
         .map(id => people.value[id])
-        .sort((a, b) => {
-            console.log(a.lastName, b.lastName, a.lastName < b.lastName ? -1 : 1);
-            return a.lastName < b.lastName ? -1 : 1
-        })
+        .sort((a, b) => a.lastName < b.lastName ? -1 : 1)
         .map(p => p.id)
     )
 
