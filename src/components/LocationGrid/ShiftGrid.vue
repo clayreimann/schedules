@@ -16,7 +16,7 @@ const scheduleStore = useScheduleStore()
 
 const shift = computed(() => shiftStore.shifts[props.shiftId])
 const slots = computed(() => scheduleStore.peopleByShiftId[props.week][props.shiftId] || [])
-const getName = (personId: PersonId) => peopleStore.people[personId].name
+const getName = (personId: PersonId) => `${peopleStore.people[personId].lastName}, ${peopleStore.people[personId].firstName}`
 
 </script>
 

@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { useViewOptions } from '@/stores/view-options';
 
 const viewOptions = useViewOptions()

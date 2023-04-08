@@ -25,7 +25,7 @@ const week = computed(() => schedule.value.weeks[viewOptions.activeWeek])
 </script>
 
 <template>
-    <h3>{{ person.name }}</h3>
+    <h3>{{ person.lastName }}, {{ person.firstName }}</h3>
     <table>
         <thead>
             <tr>

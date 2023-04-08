@@ -27,11 +27,11 @@ const saveFile = () => {
 	element.click();
 	document.body.removeChild(element);     
 }
-const logFile = async (files: FileList) => {
-    if (files.length == 0) {
+const processFile = async (target: HTMLInputElement | null) => {
+    if (target === null || target.files === null || target.files.length == 0) {
         return
     }
-    const text = await files[0].text()
+    const text = await target.files[0].text()
     try {
         const data = JSON.parse(text)
         console.log(data);
@@ -61,7 +61,7 @@ const deleteData = () => {
     <h3>Import/Export</h3>
     <div>
         <label for="upload">            
-            <input type="file" accept=".json,.schedule" @change="e => logFile(e.target.files)">
+            <input type="file" accept=".json,.schedule" @change="processFile($event.target as HTMLInputElement)">
         </label>
     </div>
     <div>
