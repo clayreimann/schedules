@@ -1,0 +1,73 @@
+<script setup lang="ts">
+import { useLocationStore } from '@/stores/locations';
+import { usePeopleStore } from '@/stores/people';
+import { useScheduleStore } from '@/stores/schedules';
+import { useShiftStore } from '@/stores/shifts';
+
+
+const locationStore = useLocationStore()
+const peopleStore = usePeopleStore()
+const scheduleStore = useScheduleStore()
+const shiftStore = useShiftStore()
+
+const saveFile = () => {
+    const text = JSON.stringify({
+        locations: locationStore.locations,
+        schedules: scheduleStore.schedules,
+        shifts: shiftStore.shifts,
+        people: peopleStore.people,
+    }, null, 2);
+	const filename = `schedule-run-${new Date().toISOString()}.schedule`;
+	const element = document.createElement('a');
+	element.setAttribute('href', 'data:application/json;charset=utf-8,' + encodeURIComponent(text));
+	element.setAttribute('download', filename);
+
+	element.style.display = 'none';
+	document.body.appendChild(element);
+	element.click();
+	document.body.removeChild(element);     
+}
+const logFile = async (files: FileList) => {
+    if (files.length == 0) {
+        return
+    }
+    const text = await files[0].text()
+    try {
+        const data = JSON.parse(text)
+        console.log(data);
+        if (data.shifts) {
+            shiftStore.shifts = data.shifts
+        }
+        if (data.people) {
+            peopleStore.people = data.people
+        }
+        if (data.locations) {
+            locationStore.locations = data.locations
+        }
+        if (data.schedules) {
+            scheduleStore.schedules = data.schedules
+        }
+    } catch (e) {
+        console.error(e)
+        console.error('From text: ', text)
+    }
+}
+const deleteData = () => {
+
+}
+</script>
+
+<template>
+    <h3>Import/Export</h3>
+    <div>
+        <label for="upload">            
+            <input type="file" accept=".json,.schedule" @change="e => logFile(e.target.files)">
+        </label>
+    </div>
+    <div>
+        <a @click="saveFile">Download data</a>
+    </div>
+    <div>
+        <a @click="deleteData">Delete all data!</a>
+    </div>
+</template>

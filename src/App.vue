@@ -22,7 +22,7 @@ const locationStore = useLocationStore()
       <div>
         <h5>People</h5>
         <template v-for="id in peopleStore.ids">
-          <RouterLink :to="`/schedule/${id}`">{{ peopleStore.people[id].name }}</RouterLink>
+          <RouterLink :to="`/schedule/${id}`">{{ peopleStore.people[id].lastName }}, {{ peopleStore.people[id].firstName }}</RouterLink>
         </template>
       </div>
 
@@ -30,6 +30,7 @@ const locationStore = useLocationStore()
         <h5>Other</h5>
         <RouterLink to="/all">Everything</RouterLink>
         <RouterLink to="/">Settings</RouterLink>
+        <RouterLink to="/export">Import/Export</RouterLink>
         <ContextSelect/>
       </div>
 
@@ -64,6 +65,10 @@ nav {
 
 nav a.router-link-exact-active {
   color: var(--color-text);
+}
+
+nav div a:last-of-type {
+  margin-right: 0.5rem;
 }
 
 nav a.router-link-exact-active:hover {

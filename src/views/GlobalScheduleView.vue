@@ -1,12 +1,10 @@
 <script setup lang="ts">
+import LocationGrid from '@/components/LocationGrid/LocationGrid.vue';
+import ScheduleGrid from '@/components/ScheduleGrid/ScheduleGrid.vue';
 import { useLocationStore } from '@/stores/locations';
-import { useScheduleStore } from '@/stores/schedules';
-import LocationGrid from '@/components/LocationGrid/LocationGrid.vue'
-import ScheduleGrid from '@/components/ScheduleGrid/ScheduleGrid.vue'
 import { usePeopleStore } from '@/stores/people';
 
 const locationsStore = useLocationStore()
-const scheduleStore = useScheduleStore()
 const peopleStore = usePeopleStore()
 
 </script>

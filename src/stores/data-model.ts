@@ -35,7 +35,8 @@ export interface ShiftSpec {
 
 export interface Person {
     id: PersonId
-    name: string
+    lastName: string
+    firstName: string
 }
 
 export interface Schedule {
