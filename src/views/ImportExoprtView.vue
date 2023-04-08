@@ -17,7 +17,9 @@ const saveFile = () => {
         shifts: shiftStore.shifts,
         people: peopleStore.people,
     }, null, 2);
-	const filename = `schedule-run-${new Date().toISOString()}.schedule`;
+    const now = new Date()
+    const date = `${now.getFullYear()}-${now.getMonth()+1}-${now.getDate()}T${now.getHours()}-${now.getMinutes()}-${now.getSeconds()}`
+	const filename = `schedule-run-${date}.schedule`;
 	const element = document.createElement('a');
 	element.setAttribute('href', 'data:application/json;charset=utf-8,' + encodeURIComponent(text));
 	element.setAttribute('download', filename);
@@ -53,7 +55,10 @@ const processFile = async (target: HTMLInputElement | null) => {
     }
 }
 const deleteData = () => {
-
+    shiftStore.shifts = {}
+    peopleStore.people = {}
+    locationStore.locations = {}
+    scheduleStore.schedules = {}
 }
 </script>
 
