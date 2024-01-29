@@ -1,0 +1,26 @@
+name: Test SPA build on PR
+
+on:
+  pull_request:
+    branches: ["main"]
+permissions:
+  contents: read
+concurrency:
+  group: "pr-build"
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16.x"
+          cache: "npm"
+      - name: "Install"
+        run: npm ci
+      - name: "Build"
+        run: DEPLOY=1 npm run build
+  
