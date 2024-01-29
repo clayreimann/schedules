@@ -16,6 +16,7 @@ const locationStore = useLocationStore()
         <template v-for="l in locationStore.locations">
           <RouterLink :to="`/location/${l.id}`">{{ l.name }}</RouterLink>
         </template>
+        <RouterLink :to="`/location/all`">Summary</RouterLink>
       </div>
 
       <div>

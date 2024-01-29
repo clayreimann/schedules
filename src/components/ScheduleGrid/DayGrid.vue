@@ -63,7 +63,6 @@ const toggleShift = (day: Weekday, shiftId: ShiftSpecId) => {
     flex-direction: column;
 }
 
-
 @media print {
     .btn.outline {
         border: none;

@@ -30,7 +30,7 @@ const week = computed(() => schedule.value.weeks[viewOptions.activeWeek])
 
 <template>
     <div v-if="viewOptions.showLocations">
-        <LocationGrid v-for="locationId in locations" :locationId="locationId" :collapsed="true" :person-id="personId" />
+        <LocationGrid v-for="locationId in locations" :locationId="locationId" :collapsed="viewOptions.collapsed" :person-id="personId" />
     </div>
     <h3>{{ person.lastName }}, {{ person.firstName }}</h3>
     <table>
@@ -51,7 +51,7 @@ const week = computed(() => schedule.value.weeks[viewOptions.activeWeek])
             </thead>
             <tbody>
                 <tr>
-                    <td class="variable">Week&nbsp;{{ i + 1 }}</td>
+                    <td class="variable header">Week&nbsp;{{ i + 1 }}</td>
                     <td><DayGrid :week="i" day="sunday" :schedule-id="scheduleId" :selected-shifts="week.sunday" /></td>
                     <td><DayGrid :week="i" day="monday" :schedule-id="scheduleId" :selected-shifts="week.monday" /></td>
                     <td><DayGrid :week="i" day="tuesday" :schedule-id="scheduleId" :selected-shifts="week.tuesday" /></td>
@@ -80,7 +80,7 @@ const week = computed(() => schedule.value.weeks[viewOptions.activeWeek])
             </thead>
             <tbody>
                 <tr>
-                    <td class="variable">Week&nbsp;{{ weekIdx + 1 }}</td>
+                    <td class="variable header">Week&nbsp;{{ weekIdx + 1 }}</td>
                     <td><DayGrid :week="weekIdx" day="sunday" :schedule-id="scheduleId" :selected-shifts="week.sunday" /></td>
                     <td><DayGrid :week="weekIdx" day="monday" :schedule-id="scheduleId" :selected-shifts="week.monday" /></td>
                     <td><DayGrid :week="weekIdx" day="tuesday" :schedule-id="scheduleId" :selected-shifts="week.tuesday" /></td>
@@ -104,6 +104,10 @@ th,
 td {
     width: 160px;
     padding: 0.2rem 0.8rem;
+}
+
+th, .header {
+    font-weight: bold;
 }
 
 td {
