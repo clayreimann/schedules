@@ -1,12 +1,12 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import SettingsView from '@/views/SettingsView.vue'
 import ScheduleView from '@/views/ScheduleView.vue'
 import LocationView from '@/views/LocationView.vue'
 import GlobalScheduleView from '@/views/GlobalScheduleView.vue'
-import ImportExoprtView from '@/views/ImportExoprtView.vue'
+import ImportExoprtView from '@/views/ImportExportView.vue'
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHashHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',

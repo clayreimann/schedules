@@ -38,7 +38,7 @@ const weekNo = computed(() => viewOptions.activeWeek)
         <tbody>
             <template v-if="viewOptions.showAll">
                 <tr v-for="(week, w) in location.template">
-                    <td class="variable">Week {{ w + 1 }}</td>
+                    <td class="variable">Week&nbsp;{{ w + 1 }}</td>
                     <td><ShiftGrid v-for="shiftId in week.sunday" :week="w" :shiftId="shiftId" :collapsed="collapsed" :personId="personId" /></td>
                     <td><ShiftGrid v-for="shiftId in week.monday" :week="w" :shiftId="shiftId" :collapsed="collapsed" :personId="personId" /></td>
                     <td><ShiftGrid v-for="shiftId in week.tuesday" :week="w" :shiftId="shiftId" :collapsed="collapsed" :personId="personId" /></td>
@@ -50,7 +50,7 @@ const weekNo = computed(() => viewOptions.activeWeek)
                 </tr>
             </template>
             <tr v-else>
-                <td class="variable">{{ weekNo + 1 }}</td>
+                <td class="variable">Week&nbsp;{{ weekNo + 1 }}</td>
                 <td><ShiftGrid v-for="shiftId in week.sunday" :week="weekNo" :shiftId="shiftId" :collapsed="collapsed" :personId="personId" /></td>
                 <td><ShiftGrid v-for="shiftId in week.monday" :week="weekNo" :shiftId="shiftId" :collapsed="collapsed" :personId="personId" /></td>
                 <td><ShiftGrid v-for="shiftId in week.tuesday" :week="weekNo" :shiftId="shiftId" :collapsed="collapsed" :personId="personId" /></td>

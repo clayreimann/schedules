@@ -39,7 +39,7 @@ const addShift = (locationId: LocationId, week: number, day: Weekday) => {
             </thead>
             <tbody>
                 <tr v-for="(week, i) in location.template">
-                    <td>{{ i + 1 }}</td>
+                    <td>Week&nbsp;{{ i + 1 }}</td>
                     <td>
                         <ShiftEdit v-for="shiftId in week.sunday" :shiftId="shiftId" />
                         <button @click="addShift(location.id, i, 'sunday')">Add shift</button>
