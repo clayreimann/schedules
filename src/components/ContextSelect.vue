@@ -12,12 +12,16 @@ const viewOptions = useViewOptions()
             Show All
             <input type="checkbox" v-model="viewOptions.showAll">
         </label>
+        <label>
+            Show Locations
+            <input type="checkbox" v-model="viewOptions.showLocations">
+        </label>
         <label v-if="!viewOptions.showAll">
             <select v-model.number="viewOptions.activeWeek">
-                <option value="0">1</option>
-                <option value="1">2</option>
-                <option value="2">3</option>
-                <option value="3">4</option>
+                <option value="0">1st</option>
+                <option value="1">2nd</option>
+                <option value="2">3rd</option>
+                <option value="3">4th</option>
             </select>
         </label>
     </div>

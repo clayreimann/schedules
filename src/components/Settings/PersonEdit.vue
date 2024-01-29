@@ -23,14 +23,14 @@ const remove = (id: PersonId) => {
 <template>
     <template v-if="person">
         <h4>{{ person.lastName }}, {{ person.firstName }} <small>({{ person.id }})</small></h4>
-        <label for="lastName">
-            Last name:
-            <input type="text" v-model="person.lastName">
-        </label>
-        <label for="firstName">
-            First name:
-            <input type="text" v-model="person.firstName">
-        </label>
+        <input type="text" v-model="person.firstName"> <input type="text" v-model="person.lastName">
+        <div v-if="scheduleStore.scheduleByPersonId[person.id]">
+            Schedule present <small>({{ scheduleStore.scheduleByPersonId[person.id] }})</small>
+        </div>
+        <div v-else>
+            No schedule found
+            <button class="btn btn-primary" @click="scheduleStore.addSchedule(person.id)">Create Schedule</button>
+        </div>
         <a class="btn btn-danger" @click="remove(person.id)">Delete Employee</a>
     </template>
 </template>

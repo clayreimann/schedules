@@ -30,6 +30,7 @@ export interface ShiftSpec {
     end: number
     slots: number
     label: string
+    tags: string[]
     colorClass: string
 }
 

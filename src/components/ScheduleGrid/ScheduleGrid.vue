@@ -5,6 +5,8 @@ import { useScheduleStore } from '@/stores/schedules';
 import { useViewOptions } from '@/stores/view-options';
 import { computed } from 'vue';
 import DayGrid from './DayGrid.vue';
+import LocationGrid from '../LocationGrid/LocationGrid.vue';
+import { useLocationStore } from '@/stores/locations';
 
 const props = defineProps<{
     personId: PersonId
@@ -18,6 +20,8 @@ const scheduleId = computed(() => scheduleStore.scheduleByPersonId[props.personI
 
 const viewOptions = useViewOptions()
 const scheudleStore = useScheduleStore()
+const locationStore = useLocationStore()
+const locations = computed(() => Object.keys(locationStore.locations))
 const schedule = computed(() => scheudleStore.schedules[scheduleId.value])
 const weekIdx = computed(() => viewOptions.activeWeek)
 const week = computed(() => schedule.value.weeks[viewOptions.activeWeek])
@@ -25,6 +29,9 @@ const week = computed(() => schedule.value.weeks[viewOptions.activeWeek])
 </script>
 
 <template>
+    <div v-if="viewOptions.showLocations">
+        <LocationGrid v-for="locationId in locations" :locationId="locationId" :collapsed="true" :person-id="personId" />
+    </div>
     <h3>{{ person.lastName }}, {{ person.firstName }}</h3>
     <table>
         <thead>

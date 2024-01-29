@@ -82,35 +82,6 @@ const toggleShift = (day: Weekday, shiftId: ShiftSpecId) => {
     flex-direction: column;
 }
 
-.btn.outline {
-    border: 1px solid black;
-    border-radius: 4px;
-    padding: 0.2rem;
-    margin: 0.2rem;
-    background-color: white;
-    cursor: pointer;
-    color: inherit;
-    text-align: center;
-
-
-    &.cambridge {
-        --btn-color: var(--theme-color-cambridge);
-        border-color: var(--btn-color);
-
-        &.active {
-            background-color: var(--btn-color);
-        }
-    }
-
-    &.rose-brown {
-        --btn-color: var(--theme-color-rose-brown);
-        border-color: var(--btn-color);
-
-        &.active {
-            background-color: var(--btn-color);
-        }
-    }
-}
 
 @media print {
     .btn.outline {

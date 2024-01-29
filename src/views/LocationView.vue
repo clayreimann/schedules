@@ -9,7 +9,7 @@ const locationId = computed(() => route.params.id as LocationId)
 </script>
 
 <template>
-    <LocationGrid :locationId="locationId" />
+    <LocationGrid :locationId="locationId" :collapsed="false" />
 </template>
 
 <style scoped>

@@ -1,0 +1,1630 @@
+{
+  "locations": {
+    "west-towne": {
+      "id": "west-towne",
+      "name": "West Towne Clinic",
+      "template": [
+        {
+          "monday": [
+            "wt-mon-am",
+            "wt-mon-pm",
+            "wt-mon-eve"
+          ],
+          "tuesday": [
+            "wt-tue-am",
+            "wt-tue-pm",
+            "wt-tue-eve"
+          ],
+          "wednesday": [
+            "wt-wed-am",
+            "wt-wed-pm",
+            "wt-wed-eve"
+          ],
+          "thursday": [
+            "wt-thu-am",
+            "wt-thu-pm",
+            "wt-thu-eve"
+          ],
+          "friday": [
+            "wt-fri-am",
+            "wt-fri-pm",
+            "wt-fri-eve"
+          ],
+          "saturday": [
+            "wt-sat-am",
+            "wt-sat-pm"
+          ],
+          "sunday": [
+            "wt-sun-am",
+            "wt-sun-pm"
+          ]
+        },
+        {
+          "monday": [
+            "wt-mon-am",
+            "wt-mon-pm",
+            "wt-mon-eve"
+          ],
+          "tuesday": [
+            "wt-tue-am",
+            "wt-tue-pm",
+            "wt-tue-eve"
+          ],
+          "wednesday": [
+            "wt-wed-am",
+            "wt-wed-pm",
+            "wt-wed-eve"
+          ],
+          "thursday": [
+            "wt-thu-am",
+            "wt-thu-pm",
+            "wt-thu-eve"
+          ],
+          "friday": [
+            "wt-fri-am",
+            "wt-fri-pm",
+            "wt-fri-eve"
+          ],
+          "saturday": [
+            "wt-sat-am",
+            "wt-sat-pm"
+          ],
+          "sunday": [
+            "wt-sun-am",
+            "wt-sun-pm"
+          ]
+        },
+        {
+          "monday": [
+            "wt-mon-am",
+            "wt-mon-pm",
+            "wt-mon-eve"
+          ],
+          "tuesday": [
+            "wt-tue-am",
+            "wt-tue-pm",
+            "wt-tue-eve"
+          ],
+          "wednesday": [
+            "wt-wed-am",
+            "wt-wed-pm",
+            "wt-wed-eve"
+          ],
+          "thursday": [
+            "wt-thu-am",
+            "wt-thu-pm",
+            "wt-thu-eve"
+          ],
+          "friday": [
+            "wt-fri-am",
+            "wt-fri-pm",
+            "wt-fri-eve"
+          ],
+          "saturday": [
+            "wt-sat-am",
+            "wt-sat-pm"
+          ],
+          "sunday": [
+            "wt-sun-am",
+            "wt-sun-pm"
+          ]
+        },
+        {
+          "monday": [
+            "wt-mon-am",
+            "wt-mon-pm",
+            "wt-mon-eve"
+          ],
+          "tuesday": [
+            "wt-tue-am",
+            "wt-tue-pm",
+            "wt-tue-eve"
+          ],
+          "wednesday": [
+            "wt-wed-am",
+            "wt-wed-pm",
+            "wt-wed-eve"
+          ],
+          "thursday": [
+            "wt-thu-am",
+            "wt-thu-pm",
+            "wt-thu-eve"
+          ],
+          "friday": [
+            "wt-fri-am",
+            "wt-fri-pm",
+            "wt-fri-eve"
+          ],
+          "saturday": [
+            "wt-sat-am",
+            "wt-sat-pm"
+          ],
+          "sunday": [
+            "wt-sun-am",
+            "wt-sun-pm"
+          ]
+        }
+      ]
+    },
+    "union-corners": {
+      "id": "union-corners",
+      "name": "Union Corners Clinic",
+      "template": [
+        {
+          "monday": [
+            "uc-mon-am",
+            "uc-mon-pm",
+            "uc-mon-eve"
+          ],
+          "tuesday": [
+            "uc-tue-am",
+            "uc-tue-pm",
+            "uc-tue-eve"
+          ],
+          "wednesday": [
+            "uc-wed-am",
+            "uc-wed-pm",
+            "uc-wed-eve"
+          ],
+          "thursday": [
+            "uc-thu-am",
+            "uc-thu-pm",
+            "uc-thu-eve"
+          ],
+          "friday": [
+            "uc-fri-am",
+            "uc-fri-pm",
+            "uc-fri-eve"
+          ],
+          "saturday": [
+            "uc-sat-am",
+            "uc-sat-pm"
+          ],
+          "sunday": [
+            "uc-sun-am",
+            "uc-sun-pm"
+          ]
+        },
+        {
+          "monday": [
+            "uc-mon-am",
+            "uc-mon-pm",
+            "uc-mon-eve"
+          ],
+          "tuesday": [
+            "uc-tue-am",
+            "uc-tue-pm",
+            "uc-tue-eve"
+          ],
+          "wednesday": [
+            "uc-wed-am",
+            "uc-wed-pm",
+            "uc-wed-eve"
+          ],
+          "thursday": [
+            "uc-thu-am",
+            "uc-thu-pm",
+            "uc-thu-eve"
+          ],
+          "friday": [
+            "uc-fri-am",
+            "uc-fri-pm",
+            "uc-fri-eve"
+          ],
+          "saturday": [
+            "uc-sat-am",
+            "uc-sat-pm"
+          ],
+          "sunday": [
+            "uc-sun-am",
+            "uc-sun-pm"
+          ]
+        },
+        {
+          "monday": [
+            "uc-mon-am",
+            "uc-mon-pm",
+            "uc-mon-eve"
+          ],
+          "tuesday": [
+            "uc-tue-am",
+            "uc-tue-pm",
+            "uc-tue-eve"
+          ],
+          "wednesday": [
+            "uc-wed-am",
+            "uc-wed-pm",
+            "uc-wed-eve"
+          ],
+          "thursday": [
+            "uc-thu-am",
+            "uc-thu-pm",
+            "uc-thu-eve"
+          ],
+          "friday": [
+            "uc-fri-am",
+            "uc-fri-pm",
+            "uc-fri-eve"
+          ],
+          "saturday": [
+            "uc-sat-am",
+            "uc-sat-pm"
+          ],
+          "sunday": [
+            "uc-sun-am",
+            "uc-sun-pm"
+          ]
+        },
+        {
+          "monday": [
+            "uc-mon-am",
+            "uc-mon-pm",
+            "uc-mon-eve"
+          ],
+          "tuesday": [
+            "uc-tue-am",
+            "uc-tue-pm",
+            "uc-tue-eve"
+          ],
+          "wednesday": [
+            "uc-wed-am",
+            "uc-wed-pm",
+            "uc-wed-eve"
+          ],
+          "thursday": [
+            "uc-thu-am",
+            "uc-thu-pm",
+            "uc-thu-eve"
+          ],
+          "friday": [
+            "uc-fri-am",
+            "uc-fri-pm",
+            "uc-fri-eve"
+          ],
+          "saturday": [
+            "uc-sat-am",
+            "uc-sat-pm"
+          ],
+          "sunday": [
+            "uc-sun-am",
+            "uc-sun-pm"
+          ]
+        }
+      ]
+    }
+  },
+  "schedules": {
+    "6c502dfbdddc46c18f80704e7e11ddf2": {
+      "id": "6c502dfbdddc46c18f80704e7e11ddf2",
+      "personId": "6c502dfbdddc46c18f80704e7e11ddf2",
+      "weeks": [
+        {
+          "sunday": [],
+          "monday": [
+            "wt-mon-am"
+          ],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        },
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        },
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        },
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        }
+      ]
+    },
+    "eb86ef667e304548b2353128292c561d": {
+      "id": "eb86ef667e304548b2353128292c561d",
+      "personId": "eb86ef667e304548b2353128292c561d",
+      "weeks": [
+        {
+          "sunday": [],
+          "monday": [
+            "uc-mon-eve"
+          ],
+          "tuesday": [
+            "uc-tue-pm"
+          ],
+          "wednesday": [
+            "wt-wed-pm"
+          ],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        },
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        },
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        },
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        }
+      ]
+    },
+    "a5e0f7f64bb142379852c6c89df4efb3": {
+      "id": "a5e0f7f64bb142379852c6c89df4efb3",
+      "personId": "a5e0f7f64bb142379852c6c89df4efb3",
+      "weeks": [
+        {
+          "sunday": [],
+          "monday": [
+            "wt-mon-pm"
+          ],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [
+            "uc-thu-am",
+            "uc-thu-pm"
+          ],
+          "friday": [
+            "uc-fri-eve"
+          ],
+          "saturday": []
+        },
+        {
+          "sunday": [
+            "uc-sun-am",
+            "uc-sun-pm"
+          ],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        },
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        },
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        }
+      ]
+    },
+    "77747f9d195744b1b980f4e57733e2af": {
+      "id": "77747f9d195744b1b980f4e57733e2af",
+      "personId": "77747f9d195744b1b980f4e57733e2af",
+      "weeks": [
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        },
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        },
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        },
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        }
+      ]
+    },
+    "7f1828a61efa471099e6be211231724e": {
+      "id": "7f1828a61efa471099e6be211231724e",
+      "personId": "7f1828a61efa471099e6be211231724e",
+      "weeks": [
+        {
+          "sunday": [],
+          "monday": [
+            "wt-mon-am"
+          ],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        },
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        },
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        },
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        }
+      ]
+    },
+    "cc5d9590122b4a658f72b3ee9bbc5bf8": {
+      "id": "cc5d9590122b4a658f72b3ee9bbc5bf8",
+      "personId": "cc5d9590122b4a658f72b3ee9bbc5bf8",
+      "weeks": [
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        },
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        },
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        },
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        }
+      ]
+    },
+    "f525e1897b934b25b6f3fdebe338a501": {
+      "id": "f525e1897b934b25b6f3fdebe338a501",
+      "personId": "f525e1897b934b25b6f3fdebe338a501",
+      "weeks": [
+        {
+          "sunday": [],
+          "monday": [
+            "wt-mon-am"
+          ],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        },
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        },
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        },
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        }
+      ]
+    },
+    "e698e7d4dcb94163b353cdde7b6e9672": {
+      "id": "e698e7d4dcb94163b353cdde7b6e9672",
+      "personId": "e698e7d4dcb94163b353cdde7b6e9672",
+      "weeks": [
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        },
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        },
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        },
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        }
+      ]
+    },
+    "e01b5299f9f64da5a999cb7623b0d869": {
+      "id": "e01b5299f9f64da5a999cb7623b0d869",
+      "personId": "e01b5299f9f64da5a999cb7623b0d869",
+      "weeks": [
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        },
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        },
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        },
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        }
+      ]
+    },
+    "f51bb5ae717b4974acb43e13ec2e970d": {
+      "id": "f51bb5ae717b4974acb43e13ec2e970d",
+      "personId": "f51bb5ae717b4974acb43e13ec2e970d",
+      "weeks": [
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        },
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        },
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        },
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        }
+      ]
+    },
+    "9ef2375a677842059de54bc449a0e0dc": {
+      "id": "9ef2375a677842059de54bc449a0e0dc",
+      "personId": "9ef2375a677842059de54bc449a0e0dc",
+      "weeks": [
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        },
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        },
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        },
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        }
+      ]
+    },
+    "eed755036d0b48b38bf215532876e350": {
+      "id": "eed755036d0b48b38bf215532876e350",
+      "personId": "eed755036d0b48b38bf215532876e350",
+      "weeks": [
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        },
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        },
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        },
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        }
+      ]
+    },
+    "6c8cf5beac5a420f80c6cc6e2f86eb01": {
+      "id": "6c8cf5beac5a420f80c6cc6e2f86eb01",
+      "personId": "6c8cf5beac5a420f80c6cc6e2f86eb01",
+      "weeks": [
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        },
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        },
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        },
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        }
+      ]
+    },
+    "f4af9a8720674d9887b9b4fe0ae26d73": {
+      "id": "f4af9a8720674d9887b9b4fe0ae26d73",
+      "personId": "f4af9a8720674d9887b9b4fe0ae26d73",
+      "weeks": [
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        },
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        },
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        },
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        }
+      ]
+    },
+    "c998855c49a3436c99b3fc3fbbe9ca4d": {
+      "id": "c998855c49a3436c99b3fc3fbbe9ca4d",
+      "personId": "c998855c49a3436c99b3fc3fbbe9ca4d",
+      "weeks": [
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        },
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        },
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        },
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        }
+      ]
+    },
+    "e65b70d82c524675885025feb1ec9159": {
+      "id": "e65b70d82c524675885025feb1ec9159",
+      "personId": "e65b70d82c524675885025feb1ec9159",
+      "weeks": [
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        },
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        },
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        },
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        }
+      ]
+    },
+    "59be101caade4bfebb6cd75cb6d63125": {
+      "id": "59be101caade4bfebb6cd75cb6d63125",
+      "personId": "59be101caade4bfebb6cd75cb6d63125",
+      "weeks": [
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        },
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        },
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        },
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        }
+      ]
+    },
+    "d3f1692489e542d8a1f72f7b039a2f17": {
+      "id": "d3f1692489e542d8a1f72f7b039a2f17",
+      "personId": "d3f1692489e542d8a1f72f7b039a2f17",
+      "weeks": [
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        },
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        },
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        },
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        }
+      ]
+    },
+    "4dbd87f1210c49d883876be88dec1d36": {
+      "id": "4dbd87f1210c49d883876be88dec1d36",
+      "personId": "4dbd87f1210c49d883876be88dec1d36",
+      "weeks": [
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        },
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        },
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        },
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        }
+      ]
+    },
+    "4941996c1b5f4a6daa8446de30118b4f": {
+      "id": "4941996c1b5f4a6daa8446de30118b4f",
+      "personId": "4941996c1b5f4a6daa8446de30118b4f",
+      "weeks": [
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        },
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        },
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        },
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        }
+      ]
+    },
+    "43c86ae9d2474a1f9ce5abb6aab469d1": {
+      "id": "43c86ae9d2474a1f9ce5abb6aab469d1",
+      "personId": "43c86ae9d2474a1f9ce5abb6aab469d1",
+      "weeks": [
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        },
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        },
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        },
+        {
+          "sunday": [],
+          "monday": [],
+          "tuesday": [],
+          "wednesday": [],
+          "thursday": [],
+          "friday": [],
+          "saturday": []
+        }
+      ]
+    }
+  },
+  "shifts": {
+    "wt-mon-am": {
+      "id": "wt-mon-am",
+      "begin": 8,
+      "end": 12,
+      "label": "WT AM",
+      "slots": 4,
+      "colorClass": "cambridge"
+    },
+    "wt-mon-pm": {
+      "id": "wt-mon-pm",
+      "begin": 12,
+      "end": 16,
+      "label": "WT PM",
+      "slots": 4,
+      "colorClass": "cambridge"
+    },
+    "wt-mon-eve": {
+      "id": "wt-mon-eve",
+      "begin": 16,
+      "end": 21,
+      "label": "WT EVE",
+      "slots": 4,
+      "colorClass": "cambridge"
+    },
+    "wt-tue-am": {
+      "id": "wt-tue-am",
+      "begin": 8,
+      "end": 12,
+      "label": "WT AM",
+      "slots": 4,
+      "colorClass": "cambridge"
+    },
+    "wt-tue-pm": {
+      "id": "wt-tue-pm",
+      "begin": 12,
+      "end": 16,
+      "label": "WT PM",
+      "slots": 4,
+      "colorClass": "cambridge"
+    },
+    "wt-tue-eve": {
+      "id": "wt-tue-eve",
+      "begin": 16,
+      "end": 21,
+      "label": "WT EVE",
+      "slots": 4,
+      "colorClass": "cambridge"
+    },
+    "wt-wed-am": {
+      "id": "wt-wed-am",
+      "begin": 8,
+      "end": 12,
+      "label": "WT AM",
+      "slots": 4,
+      "colorClass": "cambridge"
+    },
+    "wt-wed-pm": {
+      "id": "wt-wed-pm",
+      "begin": 12,
+      "end": 16,
+      "label": "WT PM",
+      "slots": 4,
+      "colorClass": "cambridge"
+    },
+    "wt-wed-eve": {
+      "id": "wt-wed-eve",
+      "begin": 16,
+      "end": 21,
+      "label": "WT EVE",
+      "slots": 4,
+      "colorClass": "cambridge"
+    },
+    "wt-thu-am": {
+      "id": "wt-thu-am",
+      "begin": 8,
+      "end": 12,
+      "label": "WT AM",
+      "slots": 4,
+      "colorClass": "cambridge"
+    },
+    "wt-thu-pm": {
+      "id": "wt-thu-pm",
+      "begin": 12,
+      "end": 16,
+      "label": "WT PM",
+      "slots": 4,
+      "colorClass": "cambridge"
+    },
+    "wt-thu-eve": {
+      "id": "wt-thu-eve",
+      "begin": 16,
+      "end": 21,
+      "label": "WT EVE",
+      "slots": 4,
+      "colorClass": "cambridge"
+    },
+    "wt-fri-am": {
+      "id": "wt-fri-am",
+      "begin": 8,
+      "end": 12,
+      "label": "WT AM",
+      "slots": 4,
+      "colorClass": "cambridge"
+    },
+    "wt-fri-pm": {
+      "id": "wt-fri-pm",
+      "begin": 12,
+      "end": 16,
+      "label": "WT PM",
+      "slots": 4,
+      "colorClass": "cambridge"
+    },
+    "wt-fri-eve": {
+      "id": "wt-fri-eve",
+      "begin": 16,
+      "end": 21,
+      "label": "WT EVE",
+      "slots": 4,
+      "colorClass": "cambridge"
+    },
+    "wt-sat-am": {
+      "id": "wt-sat-am",
+      "begin": 8,
+      "end": 13,
+      "label": "WT AM",
+      "slots": 4,
+      "colorClass": "cambridge"
+    },
+    "wt-sat-pm": {
+      "id": "wt-sat-pm",
+      "begin": 13,
+      "end": 18,
+      "label": "WT PM",
+      "slots": 4,
+      "colorClass": "cambridge"
+    },
+    "wt-sun-am": {
+      "id": "wt-sun-am",
+      "begin": 8,
+      "end": 13,
+      "label": "WT AM",
+      "slots": 4,
+      "colorClass": "cambridge"
+    },
+    "wt-sun-pm": {
+      "id": "wt-sun-pm",
+      "begin": 13,
+      "end": 18,
+      "label": "WT PM",
+      "slots": 4,
+      "colorClass": "cambridge"
+    },
+    "uc-mon-am": {
+      "id": "uc-mon-am",
+      "begin": 8,
+      "end": 12,
+      "label": "UC AM",
+      "slots": 4,
+      "colorClass": "rose-brown"
+    },
+    "uc-mon-pm": {
+      "id": "uc-mon-pm",
+      "begin": 12,
+      "end": 16,
+      "label": "UC PM",
+      "slots": 4,
+      "colorClass": "rose-brown"
+    },
+    "uc-mon-eve": {
+      "id": "uc-mon-eve",
+      "begin": 16,
+      "end": 21,
+      "label": "UC EVE",
+      "slots": 4,
+      "colorClass": "rose-brown"
+    },
+    "uc-tue-am": {
+      "id": "uc-tue-am",
+      "begin": 8,
+      "end": 12,
+      "label": "UC AM",
+      "slots": 4,
+      "colorClass": "rose-brown"
+    },
+    "uc-tue-pm": {
+      "id": "uc-tue-pm",
+      "begin": 12,
+      "end": 16,
+      "label": "UC PM",
+      "slots": 4,
+      "colorClass": "rose-brown"
+    },
+    "uc-tue-eve": {
+      "id": "uc-tue-eve",
+      "begin": 16,
+      "end": 21,
+      "label": "UC EVE",
+      "slots": 4,
+      "colorClass": "rose-brown"
+    },
+    "uc-wed-am": {
+      "id": "uc-wed-am",
+      "begin": 8,
+      "end": 12,
+      "label": "UC AM",
+      "slots": 4,
+      "colorClass": "rose-brown"
+    },
+    "uc-wed-pm": {
+      "id": "uc-wed-pm",
+      "begin": 12,
+      "end": 16,
+      "label": "UC PM",
+      "slots": 4,
+      "colorClass": "rose-brown"
+    },
+    "uc-wed-eve": {
+      "id": "uc-wed-eve",
+      "begin": 16,
+      "end": 21,
+      "label": "UC EVE",
+      "slots": 4,
+      "colorClass": "rose-brown"
+    },
+    "uc-thu-am": {
+      "id": "uc-thu-am",
+      "begin": 8,
+      "end": 12,
+      "label": "UC AM",
+      "slots": 4,
+      "colorClass": "rose-brown"
+    },
+    "uc-thu-pm": {
+      "id": "uc-thu-pm",
+      "begin": 12,
+      "end": 16,
+      "label": "UC PM",
+      "slots": 4,
+      "colorClass": "rose-brown"
+    },
+    "uc-thu-eve": {
+      "id": "uc-thu-eve",
+      "begin": 16,
+      "end": 21,
+      "label": "UC EVE",
+      "slots": 4,
+      "colorClass": "rose-brown"
+    },
+    "uc-fri-am": {
+      "id": "uc-fri-am",
+      "begin": 8,
+      "end": 12,
+      "label": "UC AM",
+      "slots": 4,
+      "colorClass": "rose-brown"
+    },
+    "uc-fri-pm": {
+      "id": "uc-fri-pm",
+      "begin": 12,
+      "end": 16,
+      "label": "UC PM",
+      "slots": 4,
+      "colorClass": "rose-brown"
+    },
+    "uc-fri-eve": {
+      "id": "uc-fri-eve",
+      "begin": 16,
+      "end": 21,
+      "label": "UC EVE",
+      "slots": 4,
+      "colorClass": "rose-brown"
+    },
+    "uc-sat-am": {
+      "id": "uc-sat-am",
+      "begin": 8,
+      "end": 13,
+      "label": "UC AM",
+      "slots": 4,
+      "colorClass": "rose-brown"
+    },
+    "uc-sat-pm": {
+      "id": "uc-sat-pm",
+      "begin": 13,
+      "end": 18,
+      "label": "UC PM",
+      "slots": 4,
+      "colorClass": "rose-brown"
+    },
+    "uc-sun-am": {
+      "id": "uc-sun-am",
+      "begin": 8,
+      "end": 13,
+      "label": "UC AM",
+      "slots": 4,
+      "colorClass": "rose-brown"
+    },
+    "uc-sun-pm": {
+      "id": "uc-sun-pm",
+      "begin": 13,
+      "end": 18,
+      "label": "UC PM",
+      "slots": 4,
+      "colorClass": "rose-brown"
+    }
+  },
+  "people": {
+    "6c502dfbdddc46c18f80704e7e11ddf2": {
+      "id": "6c502dfbdddc46c18f80704e7e11ddf2",
+      "lastName": "Berkner",
+      "firstName": "Laura"
+    },
+    "eb86ef667e304548b2353128292c561d": {
+      "id": "eb86ef667e304548b2353128292c561d",
+      "lastName": "Christensen",
+      "firstName": "Kayla"
+    },
+    "a5e0f7f64bb142379852c6c89df4efb3": {
+      "id": "a5e0f7f64bb142379852c6c89df4efb3",
+      "lastName": "Douglas",
+      "firstName": "Carolyn"
+    },
+    "77747f9d195744b1b980f4e57733e2af": {
+      "id": "77747f9d195744b1b980f4e57733e2af",
+      "lastName": "Erickson",
+      "firstName": "David"
+    },
+    "7f1828a61efa471099e6be211231724e": {
+      "id": "7f1828a61efa471099e6be211231724e",
+      "lastName": "Hoffmann",
+      "firstName": "Erika"
+    },
+    "cc5d9590122b4a658f72b3ee9bbc5bf8": {
+      "id": "cc5d9590122b4a658f72b3ee9bbc5bf8",
+      "lastName": "Goebel",
+      "firstName": "Cassie"
+    },
+    "f525e1897b934b25b6f3fdebe338a501": {
+      "id": "f525e1897b934b25b6f3fdebe338a501",
+      "lastName": "Gorbach",
+      "firstName": "Roxanne"
+    },
+    "e698e7d4dcb94163b353cdde7b6e9672": {
+      "id": "e698e7d4dcb94163b353cdde7b6e9672",
+      "lastName": "Jensen-Reimann",
+      "firstName": "Kaitlyn"
+    },
+    "e01b5299f9f64da5a999cb7623b0d869": {
+      "id": "e01b5299f9f64da5a999cb7623b0d869",
+      "lastName": "McDonald",
+      "firstName": "Thomas"
+    },
+    "f51bb5ae717b4974acb43e13ec2e970d": {
+      "id": "f51bb5ae717b4974acb43e13ec2e970d",
+      "lastName": "Novoa",
+      "firstName": "Leah"
+    },
+    "9ef2375a677842059de54bc449a0e0dc": {
+      "id": "9ef2375a677842059de54bc449a0e0dc",
+      "lastName": "Packwood",
+      "firstName": "Katherine"
+    },
+    "eed755036d0b48b38bf215532876e350": {
+      "id": "eed755036d0b48b38bf215532876e350",
+      "lastName": "Pechacek",
+      "firstName": "Jaime"
+    },
+    "6c8cf5beac5a420f80c6cc6e2f86eb01": {
+      "id": "6c8cf5beac5a420f80c6cc6e2f86eb01",
+      "lastName": "Penaranda",
+      "firstName": "Sean"
+    },
+    "f4af9a8720674d9887b9b4fe0ae26d73": {
+      "id": "f4af9a8720674d9887b9b4fe0ae26d73",
+      "lastName": "Plasky",
+      "firstName": "James"
+    },
+    "c998855c49a3436c99b3fc3fbbe9ca4d": {
+      "id": "c998855c49a3436c99b3fc3fbbe9ca4d",
+      "lastName": "Rowe",
+      "firstName": "Amanda"
+    },
+    "e65b70d82c524675885025feb1ec9159": {
+      "id": "e65b70d82c524675885025feb1ec9159",
+      "lastName": "Schroeder",
+      "firstName": "Therese"
+    },
+    "59be101caade4bfebb6cd75cb6d63125": {
+      "id": "59be101caade4bfebb6cd75cb6d63125",
+      "lastName": "Swodziski",
+      "firstName": "Olivia"
+    },
+    "d3f1692489e542d8a1f72f7b039a2f17": {
+      "id": "d3f1692489e542d8a1f72f7b039a2f17",
+      "lastName": "Traut",
+      "firstName": "Alexander"
+    },
+    "4dbd87f1210c49d883876be88dec1d36": {
+      "id": "4dbd87f1210c49d883876be88dec1d36",
+      "lastName": "Wahmhoff",
+      "firstName": "Neszta"
+    },
+    "4941996c1b5f4a6daa8446de30118b4f": {
+      "id": "4941996c1b5f4a6daa8446de30118b4f",
+      "lastName": "Wallner",
+      "firstName": "Joseph"
+    },
+    "43c86ae9d2474a1f9ce5abb6aab469d1": {
+      "id": "43c86ae9d2474a1f9ce5abb6aab469d1",
+      "lastName": "Wolter",
+      "firstName": "Elizabeth"
+    },
+    "976e1b3e1a99428aa2c2ecac1ba4689c": {
+      "id": "976e1b3e1a99428aa2c2ecac1ba4689c",
+      "lastName": "Employee",
+      "firstName": "New"
+    },
+    "03f9285104e74eb6bb0c4fd3c316bc73": {
+      "id": "03f9285104e74eb6bb0c4fd3c316bc73",
+      "lastName": "Employee",
+      "firstName": "New2"
+    },
+    "52216a6e2f194f6097b546232c78f515": {
+      "id": "52216a6e2f194f6097b546232c78f515",
+      "lastName": "Employee",
+      "firstName": "New3"
+    }
+  }
+}

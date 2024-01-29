@@ -5,17 +5,25 @@ import { ref } from 'vue';
 import { v4 as uuid } from 'uuid';
 import { useLocationStore } from '@/stores/locations';
 import LocationEdit from '@/components/Settings/LocationEdit.vue';
+import { useScheduleStore } from '@/stores/schedules';
 
 const peopleStore = usePeopleStore()
+const scheduleStore = useScheduleStore()
 const selectedPerson = ref('')
 const newEmployee = () => {
   const newId = uuid().replace(/-/g, '')
   peopleStore.people[newId] = { id: newId, lastName: 'Employee', firstName: 'New' }
+  scheduleStore.addSchedule(newId);
   selectedPerson.value = newId
 }
 
+
 const locationStore = useLocationStore()
 const selectedLocation = ref('')
+
+const addLocation = () => {
+  selectedLocation.value = locationStore.addLocation()
+}
 </script>
 
 <template>
@@ -35,6 +43,7 @@ const selectedLocation = ref('')
       <option value="">Select a location</option>
       <option v-for="location in locationStore.locations" :value="location.id">{{ location.name }}</option>
     </select>
+    <a class="btn" @click="addLocation">Add a location</a>
   </div>
   <LocationEdit :location-id="selectedLocation" />
 </template>
