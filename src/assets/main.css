@@ -57,3 +57,54 @@ table {
     padding: 0 2rem;
   }
 }
+
+.btn.outline {
+  border: 2px solid black;
+  border-radius: 4px;
+  padding: 0.2rem;
+  margin: 0.2rem;
+  background-color: white;
+  cursor: pointer;
+  color: inherit;
+  text-align: center;
+
+
+  &.cambridge {
+      --btn-color: var(--theme-color-cambridge);
+      border-color: var(--btn-color);
+
+      &.active {
+          background-color: var(--btn-color);
+      }
+  }
+
+  &.rose-brown {
+      --btn-color: var(--theme-color-rose-brown);
+      border-color: var(--btn-color);
+
+      &.active {
+          background-color: var(--btn-color);
+      }
+  }
+}
+
+.text-jet {
+  color: var(--theme-color-jet);
+  & > * { color: inherit; }
+}
+.text-cambridge {
+  color: var(--theme-color-cambridge);
+  & > * { color: inherit; }
+}
+.text-rose-brown {
+  color: var(--theme-color-rose-brow);
+  & > * { color: inherit; }
+}
+.text-cordovan {
+  color: var(--theme-color-cordovan);
+  & > * { color: inherit; }
+}
+.text-flax {
+  color: var(--theme-color-flax);
+  & > * { color: inherit; }
+}

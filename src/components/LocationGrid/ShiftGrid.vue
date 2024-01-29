@@ -8,6 +8,8 @@ import { computed } from 'vue';
 const props = defineProps<{
     shiftId: ShiftSpecId
     week: number
+    collapsed: boolean
+    personId?: PersonId
 }>()
 
 const shiftStore = useShiftStore()
@@ -22,8 +24,11 @@ const getName = (personId: PersonId) => `${peopleStore.people[personId].lastName
 
 <template>
     <div :class="`shift-container ${shift.colorClass}`">
-        <b :title="shift.id">{{ shift.label }}</b>
-        <div v-for="n in shift.slots" class="shift">
+        <b :title="shift.id" :class="collapsed ? 'collapsed' : ''">{{ shift.label }}</b>
+        <span v-if="collapsed" :class="`counter ${slots.includes(personId ?? 'nope') ? 'working' : ''}`" :title="slots.map(getName).join('\n')">
+            {{ slots.length }} of {{ shift.slots }}
+        </span>
+        <div v-else v-for="n in shift.slots" class="shift">
             <span v-if="slots[n-1]">
                 {{ getName(slots[n - 1]) }}
             </span>
@@ -36,8 +41,24 @@ const getName = (personId: PersonId) => `${peopleStore.people[personId].lastName
 <style>
 .shift-container {
     padding: 0.3rem 0.1rem;
+
+    & span.counter {
+        display: inline-block;
+        margin-left: 1rem;
+
+        &.working {
+            text-decoration: underline;
+            font-weight: bold;
+        }
+    }
+
     & b {
         display: block;
+
+        &.collapsed {
+            display: inline-block;
+            min-width: 4rem;
+        }
     }
 
     &.cambridge {

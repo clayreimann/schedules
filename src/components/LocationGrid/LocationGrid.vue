@@ -1,12 +1,14 @@
 <script setup lang="ts">
 import ShiftGrid from '@/components/LocationGrid/ShiftGrid.vue';
-import type { LocationId } from '@/stores/data-model';
+import type { LocationId, PersonId } from '@/stores/data-model';
 import { useLocationStore } from '@/stores/locations';
 import { useViewOptions } from '@/stores/view-options';
 import { computed } from 'vue';
 
 const props = defineProps<{
-    locationId: LocationId
+    locationId: LocationId,
+    collapsed: boolean,
+    personId?: PersonId
 }>()
 
 const viewOptions = useViewOptions()
@@ -36,26 +38,26 @@ const weekNo = computed(() => viewOptions.activeWeek)
         <tbody>
             <template v-if="viewOptions.showAll">
                 <tr v-for="(week, w) in location.template">
-                    <td class="variable">{{ w + 1 }}</td>
-                    <td><ShiftGrid v-for="shiftId in week.sunday" :week="w" :shiftId="shiftId" /></td>
-                    <td><ShiftGrid v-for="shiftId in week.monday" :week="w" :shiftId="shiftId" /></td>
-                    <td><ShiftGrid v-for="shiftId in week.tuesday" :week="w" :shiftId="shiftId" /></td>
-                    <td><ShiftGrid v-for="shiftId in week.wednesday" :week="w" :shiftId="shiftId" /></td>
-                    <td><ShiftGrid v-for="shiftId in week.thursday" :week="w" :shiftId="shiftId" /></td>
-                    <td><ShiftGrid v-for="shiftId in week.friday" :week="w" :shiftId="shiftId" /></td>
-                    <td><ShiftGrid v-for="shiftId in week.saturday" :week="w" :shiftId="shiftId" /></td>
+                    <td class="variable">Week {{ w + 1 }}</td>
+                    <td><ShiftGrid v-for="shiftId in week.sunday" :week="w" :shiftId="shiftId" :collapsed="collapsed" :personId="personId" /></td>
+                    <td><ShiftGrid v-for="shiftId in week.monday" :week="w" :shiftId="shiftId" :collapsed="collapsed" :personId="personId" /></td>
+                    <td><ShiftGrid v-for="shiftId in week.tuesday" :week="w" :shiftId="shiftId" :collapsed="collapsed" :personId="personId" /></td>
+                    <td><ShiftGrid v-for="shiftId in week.wednesday" :week="w" :shiftId="shiftId" :collapsed="collapsed" :personId="personId" /></td>
+                    <td><ShiftGrid v-for="shiftId in week.thursday" :week="w" :shiftId="shiftId" :collapsed="collapsed" :personId="personId" /></td>
+                    <td><ShiftGrid v-for="shiftId in week.friday" :week="w" :shiftId="shiftId" :collapsed="collapsed" :personId="personId" /></td>
+                    <td><ShiftGrid v-for="shiftId in week.saturday" :week="w" :shiftId="shiftId" :collapsed="collapsed" :personId="personId" /></td>
                     <td class="variable"></td>
                 </tr>
             </template>
             <tr v-else>
                 <td class="variable">{{ weekNo + 1 }}</td>
-                <td><ShiftGrid v-for="shiftId in week.sunday" :week="weekNo" :shiftId="shiftId" /></td>
-                <td><ShiftGrid v-for="shiftId in week.monday" :week="weekNo" :shiftId="shiftId" /></td>
-                <td><ShiftGrid v-for="shiftId in week.tuesday" :week="weekNo" :shiftId="shiftId" /></td>
-                <td><ShiftGrid v-for="shiftId in week.wednesday" :week="weekNo" :shiftId="shiftId" /></td>
-                <td><ShiftGrid v-for="shiftId in week.thursday" :week="weekNo" :shiftId="shiftId" /></td>
-                <td><ShiftGrid v-for="shiftId in week.friday" :week="weekNo" :shiftId="shiftId" /></td>
-                <td><ShiftGrid v-for="shiftId in week.saturday" :week="weekNo" :shiftId="shiftId" /></td>
+                <td><ShiftGrid v-for="shiftId in week.sunday" :week="weekNo" :shiftId="shiftId" :collapsed="collapsed" :personId="personId" /></td>
+                <td><ShiftGrid v-for="shiftId in week.monday" :week="weekNo" :shiftId="shiftId" :collapsed="collapsed" :personId="personId" /></td>
+                <td><ShiftGrid v-for="shiftId in week.tuesday" :week="weekNo" :shiftId="shiftId" :collapsed="collapsed" :personId="personId" /></td>
+                <td><ShiftGrid v-for="shiftId in week.wednesday" :week="weekNo" :shiftId="shiftId" :collapsed="collapsed" :personId="personId" /></td>
+                <td><ShiftGrid v-for="shiftId in week.thursday" :week="weekNo" :shiftId="shiftId" :collapsed="collapsed" :personId="personId" /></td>
+                <td><ShiftGrid v-for="shiftId in week.friday" :week="weekNo" :shiftId="shiftId" :collapsed="collapsed" :personId="personId" /></td>
+                <td><ShiftGrid v-for="shiftId in week.saturday" :week="weekNo" :shiftId="shiftId" :collapsed="collapsed" :personId="personId" /></td>
                 <td class="variable"></td>
             </tr>
 

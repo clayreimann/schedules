@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
-import GlobalScheduleView from '@/views/GlobalScheduleView.vue'
 import { usePeopleStore } from '@/stores/people'
 import { useLocationStore } from '@/stores/locations';
 import ContextSelect from '@/components/ContextSelect.vue'
