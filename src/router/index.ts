@@ -2,6 +2,7 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 import SettingsView from '@/views/SettingsView.vue'
 import ScheduleView from '@/views/ScheduleView.vue'
 import LocationView from '@/views/LocationView.vue'
+import LocationSummaryView from '@/views/LocationSummaryView.vue'
 import GlobalScheduleView from '@/views/GlobalScheduleView.vue'
 import ImportExoprtView from '@/views/ImportExportView.vue'
 
@@ -16,6 +17,10 @@ const router = createRouter({
     {
       path: '/location/:id',
       component: LocationView
+    },
+    {
+      path: '/location/all',
+      component: LocationSummaryView
     },
     {
       path: '/all',

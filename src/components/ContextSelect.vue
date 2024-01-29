@@ -24,6 +24,10 @@ const viewOptions = useViewOptions()
                 <option value="3">4th</option>
             </select>
         </label>
+        <label>
+            Collapsed
+            <input type="checkbox" v-model="viewOptions.collapsed">
+        </label>
     </div>
 </template>
 
