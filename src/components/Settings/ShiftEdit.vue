@@ -9,6 +9,7 @@ const props = defineProps<{
 const edit = ref(false)
 const shiftStore = useShiftStore()
 const shift = computed(() => shiftStore.shifts[props.shiftId])
+shift.value.tags = shift.value.tags ?? []
 </script>
 
 <template>
@@ -44,7 +45,7 @@ const shift = computed(() => shiftStore.shifts[props.shiftId])
         </div>
         <div v-else>
             <div>Slots: {{ shift.slots }}</div>
-            <div>Tags: {{ shift.tags.join(', ') }} ({{ shift.tags.length }})</div>
+            <div>Tags: {{ shift.tags?.join(', ') }} ({{ shift.tags?.length }})</div>
             <div>Times: {{ shift.begin }} - {{ shift.end }}</div>
         </div>
     </div>

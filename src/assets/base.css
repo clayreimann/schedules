@@ -20,9 +20,9 @@
   --vt-c-text-dark-1: var(--vt-c-white);
   --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
 
-  --theme-color-jet: hsl(150, 4%, 18%, 1);
-  --theme-color-cambridge: hsl(176, 15%, 57%, 1);
-  --theme-color-rose-brown: hsl(4, 29%, 70%, 1);
+  --theme-color-jet: burlywood;
+  --theme-color-cambridge: coral;
+  --theme-color-rose-brown: blueviolet;
   --theme-color-cordovan: hsl(351, 55%, 53%, 1);
   --theme-color-flax: hsl(52, 75%, 70%, 1);
 }

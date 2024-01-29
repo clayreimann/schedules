@@ -24,20 +24,6 @@ const shiftsByDay = computed(() => Object.keys(locationStore.shiftByDay).reduce(
         return shifts
     }, {} as Record<Weekday, ShiftSpec[]>)
 )
-const startTimes = computed(() => Object.keys(locationStore.shiftByDay).reduce(
-    (startTimes, day) => {
-        const weekday = day as Weekday
-        const shiftSpecs = locationStore.shiftByDay[weekday].map(id => shiftStore.shifts[id])
-        startTimes[weekday] = shiftSpecs.reduce((starts, shift) => {
-            if (!starts[shift.begin]) {
-                starts[shift.begin] = []
-            }
-            starts[shift.begin].push(shift)
-            return starts;
-        }, {} as Record<number, ShiftSpec[]>)
-        return startTimes
-    }, {} as Record<Weekday, Record<number, ShiftSpec[]>>)
-)
 
 const selCls = (shiftId: ShiftSpecId) => props.selectedShifts.includes(shiftId) ? 'active' : ''
 
@@ -53,16 +39,11 @@ const toggleShift = (day: Weekday, shiftId: ShiftSpecId) => {
 </script>
 
 <template>
-    <div>
-        <div v-for="shifts, time of startTimes[day]" class="shift-batch">
-            <div class="shift-start">{{ time }}</div>
-            <div class="shifts">
-                <template v-for="shift in shifts">
-                    <a :class="`btn outline ${shift.colorClass} ${selCls(shift.id)}`" @click="toggleShift(day, shift.id)">{{
-                        shift.label }}</a>
-                </template>
-            </div>
-        </div>
+    <div class="shifts">
+        <template v-for="shift in shiftsByDay[day]">
+            <a :class="`btn outline ${shift.colorClass} ${selCls(shift.id)}`" @click="toggleShift(day, shift.id)">{{
+                shift.label }}</a>
+        </template>
     </div>
 </template>
 
@@ -112,12 +93,30 @@ const toggleShift = (day: Weekday, shiftId: ShiftSpecId) => {
                 background-color: var(--btn-color);
             }
         }
+
+        &.jet {
+            --btn-color: var(--theme-color-jet);
+            border-color: var(--btn-color);
+
+            &.active {
+                background-color: var(--btn-color);
+            }
+        }
+
+        &.cordovan {
+            --btn-color: var(--theme-color-cordovan);
+            border-color: var(--btn-color);
+
+            &.active {
+                background-color: var(--btn-color);
+            }
+        }
     }
 
     .shift-batch {
         padding: 0;
     }
-    
+
     .shift-start {
         display: none;
     }
