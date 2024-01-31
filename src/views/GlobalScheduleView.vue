@@ -13,8 +13,8 @@ const peopleStore = usePeopleStore()
   <template v-for="location in locationsStore.locations">
       <LocationGrid :locationId="location.id" :collapsed="false"/>
     </template>
-    <template v-for="person in peopleStore.people">
-      <ScheduleGrid :personId="person.id"/>
+    <template v-for="id in peopleStore.ids">
+      <ScheduleGrid :personId="id"/>
     </template>
 </template>
 

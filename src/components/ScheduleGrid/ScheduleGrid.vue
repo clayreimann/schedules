@@ -29,10 +29,10 @@ const week = computed(() => schedule.value.weeks[viewOptions.activeWeek])
 </script>
 
 <template>
-    <div v-if="viewOptions.showLocations">
+    <div class="no-print" v-if="viewOptions.showLocations">
         <LocationGrid v-for="locationId in locations" :locationId="locationId" :collapsed="viewOptions.collapsed" :person-id="personId" />
     </div>
-    <h3>{{ person.lastName }}, {{ person.firstName }}</h3>
+    <h3 class="employee-name">{{ person.lastName }}, {{ person.firstName }}</h3>
     <table>
         <template v-if="viewOptions.showAll">
             <template v-for="(week, i) in schedule.weeks">
@@ -121,8 +121,24 @@ td.variable {
     width: initial;
 }
 
+
 @media print {
-    table:nth-of-type(3n) {
-        break-after: page;
+    thead:not(:first-of-type) {
+        display: none;
     }
-}</style>
+
+    th, .header {
+        font-weight: normal;
+    }
+
+    .employee-name {
+        font-weight: bold;
+        text-align: center;
+        padding-bottom: 2rem;
+    }
+}
+
+.employee-name {
+    break-before: page;
+}
+</style>

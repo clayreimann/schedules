@@ -104,4 +104,11 @@ const isWorking = slots.value.includes(props.personId ?? 'nope')
 .overflow {
     font-weight: bold;
 }
+
+@media print {
+    .empty {
+        font-weight: normal;
+        text-decoration: underline;
+    }
+}
 </style>
