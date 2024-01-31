@@ -21,7 +21,7 @@ const weekNo = computed(() => viewOptions.activeWeek)
 
 <template>
     <h3>{{ location.name }}</h3>
-    <table>
+    <table class="location">
         <thead>
             <tr>
                 <th class="variable"><!-- week # --></th>
@@ -83,5 +83,14 @@ th, .header {
 
 :deep(td) {
     border: 1px solid var(--color-border);
-}</style>
+}
+
+.location tbody tr {
+    break-inside: avoid;
+}
+@media print {
+    
+    
+}
+</style>
   
