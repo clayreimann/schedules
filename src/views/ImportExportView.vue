@@ -58,12 +58,12 @@ const processFile = async (target: HTMLInputElement | null) => {
         console.error('From text: ', text)
     }
 }
-const deleteData = () => {
-    shiftStore.shifts = {}
-    peopleStore.people = {}
-    locationStore.locations = {}
-    scheduleStore.schedules = {}
-}
+// const deleteData = () => {
+//     shiftStore.shifts = {}
+//     peopleStore.people = {}
+//     locationStore.locations = {}
+//     scheduleStore.schedules = {}
+// }
 </script>
 
 <template>
@@ -76,7 +76,7 @@ const deleteData = () => {
     <div>
         <a @click="saveFile">Download data</a>
     </div>
-    <div>
+    <!-- <div>
         <a @click="deleteData">Delete all data!</a>
-    </div>
+    </div> -->
 </template>
