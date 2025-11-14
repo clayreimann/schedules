@@ -1,5 +1,9 @@
 @import './base.css';
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 #app {
   --uwuc-green: hsla(160, 100%, 30%, 1);
   --uwcu-green-bg: hsla(160, 100%, 30%, 0.2);
@@ -28,7 +32,7 @@ a.btn {
 }
 
 a.btn.btn-danger {
-  color: red;
+  color: #dc2626; /* Tailwind red-600 - good contrast in both modes */
 }
 
 table {
@@ -41,7 +45,7 @@ table {
   }
 
   a.btn.btn-danger:hover {
-    background-color: rgba(220,20,60, 0.2);
+    background-color: rgba(220, 38, 38, 0.2); /* Red-600 with 20% opacity */
   }
 }
 
@@ -59,13 +63,13 @@ table {
 }
 
 .btn.outline {
-  border: 2px solid black;
+  border: 2px solid var(--color-border-hover);
   border-radius: 4px;
   padding: 0.2rem;
   margin: 0.2rem;
-  background-color: white;
+  background-color: var(--color-background);
   cursor: pointer;
-  color: inherit;
+  color: var(--color-text);
   text-align: center;
 
 

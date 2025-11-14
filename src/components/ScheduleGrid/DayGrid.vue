@@ -27,7 +27,38 @@ const shiftsByDay = computed(() => Object.keys(locationStore.shiftByDay).reduce(
 
 const selCls = (shiftId: ShiftSpecId) => props.selectedShifts.includes(shiftId) ? 'active' : ''
 
+const isShiftConflicting = (shiftId: ShiftSpecId) => {
+    const shift = shiftStore.shifts[shiftId]
+    if (!shift) return false
+
+    // Get all shifts the person is assigned to on this day
+    const assignedShifts = props.selectedShifts
+
+    // Check if any assigned shift overlaps in time
+    for (const assignedShiftId of assignedShifts) {
+        // Skip if it's the same shift (already selected)
+        if (assignedShiftId === shiftId) continue
+
+        const assignedShift = shiftStore.shifts[assignedShiftId]
+        if (!assignedShift) continue
+
+        // Check for time overlap: (shift1.begin < shift2.end && shift1.end > shift2.begin)
+        if (shift.begin < assignedShift.end && shift.end > assignedShift.begin) {
+            return true
+        }
+    }
+
+    return false
+}
+
+const disabledCls = (shiftId: ShiftSpecId) => isShiftConflicting(shiftId) ? 'disabled' : ''
+
 const toggleShift = (day: Weekday, shiftId: ShiftSpecId) => {
+    // Don't allow toggling if the shift is conflicting
+    if (isShiftConflicting(shiftId)) {
+        return
+    }
+
     const shifts = schedule.value.weeks[props.week][day]
     if (shifts.includes(shiftId)) {
         shifts.splice(shifts.indexOf(shiftId), 1)
@@ -41,7 +72,7 @@ const toggleShift = (day: Weekday, shiftId: ShiftSpecId) => {
 <template>
     <div class="shifts">
         <template v-for="shift in shiftsByDay[day]">
-            <a :class="`btn outline ${shift.colorClass} ${selCls(shift.id)}`" @click="toggleShift(day, shift.id)">{{
+            <a :class="`btn outline ${shift.colorClass} ${selCls(shift.id)} ${disabledCls(shift.id)}`" @click="toggleShift(day, shift.id)">{{
                 shift.label }}</a>
         </template>
     </div>
@@ -63,6 +94,12 @@ const toggleShift = (day: Weekday, shiftId: ShiftSpecId) => {
     flex-direction: column;
 }
 
+.btn.disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
 @media print {
     .btn.outline {
         border: none;
@@ -73,42 +110,7 @@ const toggleShift = (day: Weekday, shiftId: ShiftSpecId) => {
         &.active {
             display: block;
             white-space: nowrap;
-        }
-
-        &.cambridge {
-            --btn-color: var(--theme-color-cambridge);
-            border-color: var(--btn-color);
-
-            &.active {
-                background-color: var(--btn-color);
-            }
-        }
-
-        &.rose-brown {
-            --btn-color: var(--theme-color-rose-brown);
-            border-color: var(--btn-color);
-
-            &.active {
-                background-color: var(--btn-color);
-            }
-        }
-
-        &.jet {
-            --btn-color: var(--theme-color-jet);
-            border-color: var(--btn-color);
-
-            &.active {
-                background-color: var(--btn-color);
-            }
-        }
-
-        &.cordovan {
-            --btn-color: var(--theme-color-cordovan);
-            border-color: var(--btn-color);
-
-            &.active {
-                background-color: var(--btn-color);
-            }
+            /* Color variants inherit from main.css */
         }
     }
 
