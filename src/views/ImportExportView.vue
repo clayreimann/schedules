@@ -56,14 +56,20 @@ const processFile = async (target: HTMLInputElement | null) => {
     } catch (e) {
         console.error(e)
         console.error('From text: ', text)
+    } finally {
+        target.files = null
     }
 }
-// const deleteData = () => {
-//     shiftStore.shifts = {}
-//     peopleStore.people = {}
-//     locationStore.locations = {}
-//     scheduleStore.schedules = {}
-// }
+const deleteData = () => {
+    let text = prompt('Are you sure you want to delete all data? This action cannot be undone. Type "DELETE" to confirm.');
+    if (text !== 'DELETE') {
+        return
+    }
+    shiftStore.shifts = {}
+    peopleStore.people = {}
+    locationStore.locations = {}
+    scheduleStore.schedules = {}
+}
 </script>
 
 <template>
@@ -76,7 +82,7 @@ const processFile = async (target: HTMLInputElement | null) => {
     <div>
         <a @click="saveFile">Download data</a>
     </div>
-    <!-- <div>
+    <div>
         <a @click="deleteData">Delete all data!</a>
-    </div> -->
+    </div>
 </template>

@@ -20,6 +20,7 @@
   --vt-c-text-dark-1: var(--vt-c-white);
   --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
 
+  /* Theme colors - light mode defaults */
   --theme-color-jet: forestgreen;
   --theme-color-cambridge: deepskyblue;
   --theme-color-rose-brown: coral;
@@ -53,6 +54,13 @@
 
     --color-heading: var(--vt-c-text-dark-1);
     --color-text: var(--vt-c-text-dark-2);
+
+    /* Theme colors - dark mode variants (brighter for better contrast) */
+    --theme-color-jet: #3cb371; /* mediumseagreen - brighter than forestgreen */
+    --theme-color-cambridge: #87ceeb; /* skyblue - slightly brighter */
+    --theme-color-rose-brown: #ff9f7f; /* lighter coral */
+    --theme-color-cordovan: hsl(351, 65%, 65%, 1); /* brighter cordovan */
+    --theme-color-flax: hsl(52, 85%, 75%, 1); /* brighter flax */
   }
   body {
     color-scheme: dark !important;

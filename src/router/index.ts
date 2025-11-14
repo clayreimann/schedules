@@ -4,7 +4,7 @@ import ScheduleView from '@/views/ScheduleView.vue'
 import LocationView from '@/views/LocationView.vue'
 import LocationSummaryView from '@/views/LocationSummaryView.vue'
 import GlobalScheduleView from '@/views/GlobalScheduleView.vue'
-import ImportExoprtView from '@/views/ImportExportView.vue'
+import ImportExportView from '@/views/ImportExportView.vue'
 
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
@@ -28,7 +28,7 @@ const router = createRouter({
     },
     {
       path: '/export',
-      component: ImportExoprtView
+      component: ImportExportView
     },
     {
       path: '/schedule/:id',
